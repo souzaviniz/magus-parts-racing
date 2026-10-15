@@ -47,10 +47,11 @@
       </article>
       <article class="product">
         <div class="product-gallery" data-gallery aria-label="Galeria de fotos da bolha racing">
-          <img class="gallery-main" src="produto-bolha-racing.jpg" alt="Bolha racing fumê light em destaque na BMW S1000RR">
+          <img class="gallery-main" src="produto-bolha-racing.jpg" alt="Bolha racing fumê light em destaque na BMW S1000RR" style="object-position:60% 50%;transform:scale(1.12) translateX(-8%)">
           <div class="gallery-thumbs" aria-label="Escolha uma foto">
-            <button class="gallery-thumb" type="button" data-src="produto-bolha-racing.jpg" data-alt="Bolha racing fumê light em destaque na BMW S1000RR" aria-label="Ver foto com foco na bolha" aria-pressed="true"><img src="produto-bolha-racing.jpg" alt=""></button>
-            <button class="gallery-thumb" type="button" data-src="produto-bolha-por-do-sol.jpg" data-alt="BMW S1000RR vermelha com bolha racing ao pôr do sol" aria-label="Ver BMW S1000RR ao pôr do sol" aria-pressed="false"><img src="produto-bolha-por-do-sol.jpg" alt=""></button>
+            <button class="gallery-thumb" type="button" data-src="produto-bolha-racing.jpg" data-alt="Bolha racing fumê light em destaque na BMW S1000RR" data-position="60% 50%" data-transform="scale(1.12) translateX(-8%)" aria-label="Ver foto com foco na bolha" aria-pressed="true"><img src="produto-bolha-racing.jpg" alt=""></button>
+            <button class="gallery-thumb" type="button" data-src="produto-bolha-por-do-sol.jpg" data-alt="BMW S1000RR vermelha com bolha racing ao pôr do sol" data-position="28% 42%" data-transform="scale(1.12) translateX(8%)" aria-label="Ver BMW S1000RR ao pôr do sol" aria-pressed="false"><img src="produto-bolha-por-do-sol.jpg" alt=""></button>
+            <button class="gallery-thumb" type="button" data-src="produto-bolha-contexto.jpg" data-alt="BMW S1000RR branca e laranja em destaque, com bolha racing fumê light" data-position="64% 30%" data-transform="scale(1.12) translateX(-8%)" aria-label="Ver BMW S1000RR completa" aria-pressed="false"><img src="produto-bolha-contexto.jpg" alt=""></button>
           </div>
         </div>
         <div class="product-top">
@@ -66,7 +67,7 @@
     <section class="contact" id="contato"><div class="wrap"><div class="contact-box"><div><div class="eyebrow">Atendimento MAGUS</div><h2>Vamos encontrar a peça certa?</h2><p>Fale com a gente para consultar aplicação, cores e disponibilidade.<br><a class="contact-whatsapp" href="https://wa.me/5516997416939?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MAGUS%20e%20quero%20consultar%20um%20produto.">WhatsApp: (16) 99741-6939</a></p></div><a class="button" href="https://wa.me/5516997416939?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MAGUS%20e%20quero%20consultar%20um%20produto.">Chamar no WhatsApp <span>↗</span></a></div></div></section>
   </main>
   <footer><div class="wrap footer-row"><div class="footer-brand">MAGUS PARTS &amp; RACING</div><div>Peças e acessórios para motos esportivas.</div><div>© 2026 MAGUS</div></div></footer>
-<script>document.querySelectorAll("[data-gallery]").forEach(gallery=>{const main=gallery.querySelector(".gallery-main");gallery.querySelectorAll(".gallery-thumb").forEach(button=>button.addEventListener("click",()=>{main.src=button.dataset.src;main.alt=button.dataset.alt;gallery.querySelectorAll(".gallery-thumb").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));}));});</script></body>
+<script>document.querySelectorAll("[data-gallery]").forEach(gallery=>{const main=gallery.querySelector(".gallery-main");gallery.querySelectorAll(".gallery-thumb").forEach(button=>button.addEventListener("click",()=>{main.src=button.dataset.src;main.alt=button.dataset.alt;main.style.objectPosition=button.dataset.position||"center";main.style.transform=button.dataset.transform||"";gallery.querySelectorAll(".gallery-thumb").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));}));});</script></body>
 </html>
 
 
